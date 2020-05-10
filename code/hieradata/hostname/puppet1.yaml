@@ -1,0 +1,14 @@
+---
+classes: 
+  - nginx
+
+puppet::status: 'stopped'
+puppet::enabled: false
+
+users:
+  pesho:
+    uid: 1111
+    home: '/home/pesho'
+  gosho:
+    uid: 1222
+    home: '/home/gosho'

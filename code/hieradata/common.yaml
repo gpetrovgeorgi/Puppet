@@ -1,0 +1,12 @@
+---
+puppet::status: 'running'
+puppet::enabled: true
+
+users:
+  pesho:
+    uid: 1221
+    home: "/home/pesho"
+  gosho:
+    uid: 1564
+    home: "home/gosho"
+    tag: 'admin user'
