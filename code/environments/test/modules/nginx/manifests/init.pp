@@ -1,7 +1,10 @@
 class nginx (
-  $version = 'latest',
-  $status  = 'stopped',
-  $enabled = true,
+  $version               = 'latest',
+  $status                = 'stopped',
+  $enabled               = true,
+  $proxy_redirect        = 'off',
+  $client_max_body_size  = '10m',
+  $proxy_connect_timeout = '90',
 ){
   notice ( "Install the $version of NginX, ensure it's $status, and set boot time start $enabled." )
 
@@ -16,12 +19,12 @@ class nginx (
     subscribe => Package['nginx'],
   }
   
-  file { '/etc/nginx/nginx.hello':
+  file { '/etc/nginx/conf.d/proxy.conf':
     ensure => file,
     owner  => 'root',
     group  => 'root',
     mode   => '0644',
-    source => 'puppet:///modules/nginx/nginx.hello',
+    source => 'puppet:///modules/nginx/proxy.conf',
   }
 
   file {'/tmp/nginx/':
