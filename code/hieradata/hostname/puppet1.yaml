@@ -1,6 +1,26 @@
 ---
 classes: 
   - nginx
+  - users
+
+nginx::version: 'latest'
+nginx::status: 'stopped'
+nginx::enabled: true
+
+users::users2add:
+  pesho:
+    uid: 1234
+    home: '/home/pesho'
+    ensure: 'present'
+  gosho:
+    uid: 1434
+    home: '/home/gosho'
+    ensure: 'absent'
+  tosho:
+    uid: 1567
+    home: '/home/tosho'
+    ensure: 'present'
+
 
 puppet::status: 'stopped'
 puppet::enabled: false

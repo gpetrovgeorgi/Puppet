@@ -1,10 +1,10 @@
 class nginx (
-  $version               = 'latest',
-  $status                = 'stopped',
-  $enabled               = true,
-  $proxy_redirect        = 'off',
-  $client_max_body_size  = '10m',
-  $proxy_connect_timeout = '90',
+  String  $version, 
+  String  $status, 
+  Boolean $enabled, 
+  String  $proxy_redirect        = 'off',
+  String  $client_max_body_size  = '10m',
+  String  $proxy_connect_timeout = '90',
 ){
   notice ( "Install the $version of NginX, ensure it's $status, and set boot time start $enabled." )
 
