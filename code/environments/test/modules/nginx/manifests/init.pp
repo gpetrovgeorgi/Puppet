@@ -20,11 +20,11 @@ class nginx (
   }
   
   file { '/etc/nginx/conf.d/proxy.conf':
-    ensure => file,
-    owner  => 'root',
-    group  => 'root',
-    mode   => '0644',
-    source => 'puppet:///modules/nginx/proxy.conf',
+    ensure  => file,
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0644',
+    content => template('nginx/proxy.conf.erb'), 
   }
 
   file {'/tmp/nginx/':
