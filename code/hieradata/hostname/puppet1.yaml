@@ -6,6 +6,9 @@ classes:
 nginx::version: 'latest'
 nginx::status: 'stopped'
 nginx::enabled: true
+nginx::proxy_redirect: 'off'
+nginx::client_max_body_size: '10m'
+nginx::proxy_connect_timeout: '90'
 
 users::users2add:
   pesho:
