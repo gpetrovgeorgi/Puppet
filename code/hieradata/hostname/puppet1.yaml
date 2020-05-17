@@ -15,7 +15,7 @@ users::users2add:
   pesho:
     uid: 1234
     home: '/home/pesho'
-    ensure: 'absent'
+    ensure: 'present'
   gosho:
     uid: 1434
     home: '/home/gosho'
