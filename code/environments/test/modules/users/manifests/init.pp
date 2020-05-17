@@ -11,4 +11,3 @@ class users (
   }
 }
 
-lookup('classes', Array[String], 'unique').include

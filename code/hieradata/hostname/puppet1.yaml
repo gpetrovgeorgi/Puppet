@@ -1,20 +1,21 @@
 ---
 classes: 
   - nginx
+  - nginx::files_dirs
   - users
 
 nginx::version: 'latest'
 nginx::status: 'stopped'
 nginx::enabled: true
-nginx::proxy_redirect: 'off'
-nginx::client_max_body_size: '10m'
-nginx::proxy_connect_timeout: '90'
+nginx::files_dirs::proxy_redirect: 'off'
+nginx::files_dirs::client_max_body_size: '10m'
+nginx::files_dirs::proxy_connect_timeout: '90'
 
 users::users2add:
   pesho:
     uid: 1234
     home: '/home/pesho'
-    ensure: 'present'
+    ensure: 'absent'
   gosho:
     uid: 1434
     home: '/home/gosho'
