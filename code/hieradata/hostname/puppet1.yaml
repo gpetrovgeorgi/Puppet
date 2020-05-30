@@ -2,6 +2,7 @@
 classes: 
   - nginx
   - nginx::files_dirs
+  - nginx::motd
   - users
 
 nginx::version: 'latest'
