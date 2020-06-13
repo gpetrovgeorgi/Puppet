@@ -2,6 +2,8 @@ define users::create (
   Integer $uid,
   String $home,
   String $ensure,
+  String $team,
+  String $specialty,
 ){
 
   user { $title:
@@ -9,4 +11,5 @@ define users::create (
     uid    => $uid,
     home   => $home,
   }
+  notice( "Hello, my name is $title and I am from $team team. My specialty is --> $specialty." )
 }

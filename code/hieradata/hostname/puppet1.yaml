@@ -17,15 +17,20 @@ users::users2add:
     uid: 1234
     home: '/home/pesho'
     ensure: 'present'
+    team: 'Management'
+    specialty: 'Cost reducing'
   gosho:
     uid: 1434
     home: '/home/gosho'
     ensure: 'absent'
+    team: 'DevOps'
+    specialty: 'Puppet Configuration'
   tosho:
     uid: 1567
     home: '/home/tosho'
     ensure: 'present'
-
+    team: 'Developers'
+    specialty: 'Pro PHP coding'
 
 puppet::status: 'stopped'
 puppet::enabled: false
