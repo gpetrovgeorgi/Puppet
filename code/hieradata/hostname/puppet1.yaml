@@ -4,6 +4,7 @@ classes:
   - nginx::files_dirs
   - nginx::motd
   - users
+  - users::module_info
 
 nginx::version: 'latest'
 nginx::status: 'stopped'
@@ -12,17 +13,19 @@ nginx::files_dirs::proxy_redirect: 'off'
 nginx::files_dirs::client_max_body_size: '10m'
 nginx::files_dirs::proxy_connect_timeout: '90'
 
+users::module_info::info: '<< Users >>'
+users::module_info::author: 'Cloud_User'
 users::users2add:
   pesho:
     uid: 1234
     home: '/home/pesho'
-    ensure: 'present'
+    ensure: 'absent'
     team: 'Management'
     specialty: 'Cost reducing'
   gosho:
     uid: 1434
     home: '/home/gosho'
-    ensure: 'absent'
+    ensure: 'present'
     team: 'DevOps'
     specialty: 'Puppet Configuration'
   tosho:
@@ -31,9 +34,6 @@ users::users2add:
     ensure: 'present'
     team: 'Developers'
     specialty: 'Pro PHP coding'
-
-puppet::status: 'stopped'
-puppet::enabled: false
 
 users:
   pesho:

@@ -11,5 +11,7 @@ define users::create (
     uid    => $uid,
     home   => $home,
   }
-  notice( "Hello, my name is $title and I am from $team team. My specialty is --> $specialty." )
+  if ( $ensure == 'present'){
+    notice("Hello, my name is $title and I am from $team team. My specialty is --> $specialty.")
+  }
 }
