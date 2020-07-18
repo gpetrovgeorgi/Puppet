@@ -1,4 +1,7 @@
 ---
+classes:
+  - role::common::common_config
+
 puppet::status: 'running'
 puppet::enabled: true
 

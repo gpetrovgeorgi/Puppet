@@ -5,6 +5,7 @@ classes:
   - nginx::motd
   - users
   - users::module_info
+  - xinetd
 
 nginx::version: 'latest'
 nginx::status: 'stopped'

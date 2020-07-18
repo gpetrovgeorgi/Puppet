@@ -1,0 +1,4 @@
+---
+classes:
+  - role::slaves::slave_one
+
