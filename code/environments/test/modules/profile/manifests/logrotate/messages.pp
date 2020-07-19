@@ -1,7 +1,6 @@
 # Usage: include profile::logrotate::messages
 
 class profile::logrotate::messages {
-  include logrotate
 
   logrotate::rule { 'var_log_messages':
     ensure        => present,
