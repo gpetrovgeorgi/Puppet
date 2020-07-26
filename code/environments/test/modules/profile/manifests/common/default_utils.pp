@@ -1,7 +1,7 @@
 # Usage: include profile::common::default_utils
 
 class profile::common::default_utils (
-  $want_utils = 'yes'){
+  String $want_utils ){
 
   $utils = {
     'htop' => {

@@ -5,6 +5,9 @@ classes:
 puppet::status: 'running'
 puppet::enabled: true
 
+profile::common::default_users::create_users: 'true'
+profile::common::default_utils::want_utils: 'yes'
+
 users:
   pesho:
     uid: 1221

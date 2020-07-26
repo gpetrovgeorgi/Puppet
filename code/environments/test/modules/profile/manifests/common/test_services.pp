@@ -1,3 +1,6 @@
+# This is only an example of a collector configuration.
+# That's why it is not included as a class under ::role::
+
 $service_status = 'stopped'
 
 package { 'httpd':

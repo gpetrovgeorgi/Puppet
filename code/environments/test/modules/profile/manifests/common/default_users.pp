@@ -1,7 +1,7 @@
 # Usage: include profile::common_users::users
 
 class profile::common::default_users (
-  String $create_users = 'true' ){
+  String $create_users ){
 
   $users = {
     'jack' => {
