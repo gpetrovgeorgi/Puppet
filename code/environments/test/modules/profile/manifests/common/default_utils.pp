@@ -16,6 +16,10 @@ class profile::common::default_utils (
       present => $want_utils,
       tag     => 'git',
     },
+    'lsof' => {
+      present => $want_utils,
+      tag     => 'lsof',
+    },
   }
   
   $utils.each |$name,$specs| {
